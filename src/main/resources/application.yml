@@ -1,0 +1,13 @@
+server:
+  port: 8881
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MarcusJD/properties-config-server #URI contendo as propriedades
+          default-label: 'master'
+          search-paths:
+          - 'greeting-service*'
